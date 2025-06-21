@@ -10,7 +10,7 @@ st.set_page_config(layout="wide")
 st.title("\U0001F4C8 Визуализация ускорений A1 по ρ и E")
 
 # === Путь к папке с CSV-файлами на Google Drive ===
-results_folder = '/content/drive/MyDrive/Abaqus/Results'
+results_folder = 'data'
 
 # === Загрузка данных ===
 @st.cache_data
