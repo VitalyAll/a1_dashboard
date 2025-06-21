@@ -47,7 +47,7 @@ df_t = df_all[np.isclose(df_all['t'], t_val, atol=1e-6)]
 pivot = df_t.pivot_table(index='rho', columns='E', values='a')
 pivot = pivot.sort_index().sort_index(axis=1).fillna(0)
 
-fig, ax = plt.subplots(figsize=(10, 6))
+fig, ax = plt.subplots(figsize=(7, 4))
 c = ax.imshow(
     pivot.values,
     extent=[pivot.columns.min()/1e6, pivot.columns.max()/1e6,
@@ -76,7 +76,7 @@ st.dataframe(min_points)
 # === Тепловая карта средних ускорений ===
 st.subheader("Среднее по модулю A1 по всей временной шкале")
 pivot_mean = mean_abs.pivot(index='rho', columns='E', values='abs_a').sort_index().sort_index(axis=1)
-fig2, ax2 = plt.subplots(figsize=(10, 6))
+fig2, ax2 = plt.subplots(figsize=(7, 4))
 c2 = ax2.imshow(
     pivot_mean.values,
     extent=[pivot_mean.columns.min()/1e6, pivot_mean.columns.max()/1e6,
